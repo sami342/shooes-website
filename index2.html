@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up page</title>
+<script src="project.js"></script>
+    <style>
+        body{
+            background: linear-gradient(to right, #0f2027,#203a43,#2c5364);
+            font-family:'Poppins',sans-serif;
+        }
+        .continer{
+            width:300px;
+            margin:20vh auto 0 auto;
+            padding: 20px;
+            background-color:whitesmoke;
+            border-radius:4px;
+            font-style: 12px;
+        }
+        h2{
+            color:white;
+            padding:0px 50px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #form{
+            width:300px;
+            margin:20vh auto 0 auto;
+            padding: 20px;
+            background-color:whitesmoke;
+            border-radius:4px;
+            font-style: 12px;
+        }
+        #form h1{
+            color:#0f2027;
+            text-align:center;
+
+        }
+      #form .button{
+            padding:auto auto;
+            margin-top:10px 20px;
+            width:100%;  
+            background-color: rgb(41,57,194);
+            border: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .input_control{
+            display:flex;
+            flex-direction: column;
+        }
+        .input_control input{
+            border:2px solid #f0f0f0;
+            border-radius: 4px;
+            display:block;
+            font-size:12px;
+            padding:10px;
+
+        }
+        .input_control input:focus{
+         outline: 0;
+        }
+        .input_control.success input{
+            border-color:#09c372;
+        }
+        .input_control.error input{
+            border-color:#ff3860;
+        }
+        .input_control.error{
+            color:#ff3860;
+            font-size:3px;
+            height:13px;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        function validation(){
+           if(document.getElementById("username").value==""){
+             alert("username required");
+             return false;
+           }
+             if(document.getElementById("email").value==""){
+             alert("email required");
+             return false;
+           }
+           if(document.getElementById("password").value==""){
+             alert("password required");
+             return false;
+           }
+           if(document.getElementById("password2").value==""){
+             alert("confriem password required");
+             return false;
+           }
+           if(document.getElementById("password2")!=password){
+            alter("your password is not much");
+           }
+           if(document.getElementById("password"<8)){
+            alter("your password should be less than 8");
+           }
+          else{
+            alert("succesfull");
+          }
+
+        }
+    </script>
+    <h2>Welcome to our Sign Up page please Fill the next informtion</h2>
+    <div class="continer">
+        <form>
+            <h1>Regestration</h1>
+             <div class="input_control">
+                <lable for="username">username</lable>
+                <input id="username" name="username" type="text" required>
+                <div class="error"></div>
+             </div>
+             <div class="input_control">
+                <lable for="email">Email</lable>
+                <input id="email" name="email" type="text" required>
+                <div class="error"></div>
+             </div>
+             <div class="input_control">
+                <lable for="password">password</lable>
+                <input id="password" name="password" type="password" required>
+                <div class="error"></div>
+             </div>
+             <div class="input_control">
+                <lable for="password">Connfrim Password</lable>
+                <input id="password2" name="password2" type="password" required>
+                <div class="error"></div>
+             </div>
+             <div class="button">
+             <button type="submit" onclick="validation()">Sign Up</button>
+             </div>
+        </form>
+    </div>
+</body>
+</html>
